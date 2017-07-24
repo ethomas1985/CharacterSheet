@@ -1,0 +1,24 @@
+<div fxLayout="column"
+     fxLayoutAlign="space-around stretch">
+	<md-toolbar color="primary">
+		<span>Characters</span>
+		<span fxFlex></span>
+		<button md-mini-fab
+		        color="accent"
+		        [routerLink]="'/new-character'">
+			<md-icon>add</md-icon>
+		</button>
+	</md-toolbar>
+
+	<div *ngFor="let character of characters; let i = index">
+		<md-card>
+			<md-card-header>
+				<div md-card-avatar>
+					<md-icon [svgIcon]="character.icon"></md-icon>
+				</div>
+				<md-card-title>{{character.name}}</md-card-title>
+				<md-card-subtitle>Lvl {{character.level}} {{character.class}}</md-card-subtitle>
+			</md-card-header>
+		</md-card>
+	</div>
+</div>

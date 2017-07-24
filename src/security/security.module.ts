@@ -1,8 +1,8 @@
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MdCardModule, MdInputModule, MD_PLACEHOLDER_GLOBAL_OPTIONS } from "@angular/material";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MdCardModule, MdInputModule } from "@angular/material";
 
+import { SharedModule } from "../shared/shared.module";
 import { SecurityService } from "./security.service";
 import { LoginComponent } from "./login.component";
 
@@ -14,13 +14,13 @@ import { LoginComponent } from "./login.component";
 		LoginComponent
 	],
 	imports: [
-		BrowserAnimationsModule,
-		FormsModule,
+		FlexLayoutModule,
 		MdCardModule,
-		MdInputModule
+		MdInputModule,
+		SharedModule
 	],
 	providers: [
 		SecurityService
 	],
 })
-export class UsersModule { }
+export class SecurityModule { }

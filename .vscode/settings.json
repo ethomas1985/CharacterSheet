@@ -3,5 +3,8 @@
 	"editor.tabSize": 4,
 	"editor.insertSpaces": false,
 	"typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-	"typescript.format.placeOpenBraceOnNewLineForFunctions": true
+	"typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+	"html.format.enable": true,
+	"html.format.wrapAttributes": "force-aligned",
+	"html.format.indentHandlebars": true
 }

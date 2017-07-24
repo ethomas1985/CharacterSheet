@@ -1,0 +1,33 @@
+<form #appLogin="ngForm" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="start center">
+	<md-card>
+		<md-card-header>
+			<md-card-title>Login Component</md-card-title>
+		</md-card-header>
+		<img width="300" src="https://paizo.com/image/content/Logos/PathfinderRPGLogo_500.jpeg">
+
+		<md-card-content fxLayout="column" fxLayoutAlign="start center">
+			<div fxLayout="row" fxFill fxLayoutAlign="center start">
+				<md-input-container>
+					<input mdInput id="username" name="username" required [(ngModel)]="model.username" placeholder="Username or email">
+				</md-input-container>
+			</div>
+			<div fxLayout="row" fxFill fxLayoutAlign="center start">
+				<md-input-container>
+					<input mdInput id="password" name="password" required [(ngModel)]="model.password" type="password" placeholder="Password">
+				</md-input-container>
+			</div>
+
+			<div fxLayout="row" fxFill fxLayoutAlign="center start">
+				Model: {{model | json}}
+			</div>
+
+			<div fxLayout="row" fxFill fxLayoutAlign="center start">
+				Token: {{Token | json}}
+			</div>
+		</md-card-content>
+
+		<md-card-actions fxLayout="row" fxLayoutAlign="center center">
+			<button md-raised-button type="submit">Login</button>
+			<!--<button md-raised-button (click)="register()">Register</button>-->
+		</md-card-actions>
+	</md-card>
