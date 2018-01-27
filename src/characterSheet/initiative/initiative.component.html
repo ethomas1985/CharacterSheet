@@ -1,0 +1,34 @@
+<mat-card>
+	<mat-card-header fxLayout="row"
+	                 fxLayoutAlign="space-between center">
+		<mat-card-title>Initiative</mat-card-title>
+	</mat-card-header>
+	<mat-card-content fxLayout="row"
+	                  fxLayoutAlign="space-around center"
+	                  fxFlex="80">
+		<cs-field [model]="dexterity"
+		          label="DEX"
+		          fxFlex="20">
+		</cs-field>
+		<span>+</span>
+		<cs-field [model]="feat"
+		          label="Feat"
+		          fxFlex="20">
+		</cs-field>
+		<span>+</span>
+		<cs-field [model]="racial"
+		          label="Racial"
+		          fxFlex="20">
+		</cs-field>
+		<span>+</span>
+		<cs-field [model]="miscellaneous"
+		          label="Misc."
+		          fxFlex="20">
+		</cs-field>
+		<span>=</span>
+		<cs-field [model]="initiative"
+		          label="Total"
+		          fxFlex>
+		</cs-field>
+	</mat-card-content>
+</mat-card>

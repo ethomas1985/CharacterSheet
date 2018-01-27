@@ -1,6 +1,9 @@
-import { Component } from "@angular/core";
+import { MicroCharacter } from "../dashboard.types";
 
-import { CharactersService, Character } from "./characters.service";
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+
+import { CharactersService } from "./characters.service";
 import { Utilities } from "../../shared/utilities.functions";
 
 @Component({
@@ -10,15 +13,16 @@ import { Utilities } from "../../shared/utilities.functions";
 })
 export class CharactersComponent
 {
-	_items: Character[] = [];
+	_items: MicroCharacter[] = [];
 
 	constructor(
 		private $charactersService: CharactersService,
+		private $router: Router,
 		private $utilities: Utilities)
 	{
 	}
 
-	get characters(): Character[]
+	get characters(): MicroCharacter[]
 	{
 		if (this.$utilities.IsUndefinedOrNullOrEmpty(this._items))
 		{
@@ -31,5 +35,10 @@ export class CharactersComponent
 				});
 		}
 		return this._items;
+	}
+
+	goTo(character: MicroCharacter)
+	{
+		this.$router.navigate(["character", character.id]);
 	}
 }

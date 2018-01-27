@@ -6,5 +6,32 @@
 	"typescript.format.placeOpenBraceOnNewLineForFunctions": true,
 	"html.format.enable": true,
 	"html.format.wrapAttributes": "force-aligned",
-	"html.format.indentHandlebars": true
+	"html.format.indentHandlebars": true,
+	"html.format.indentInnerHtml": true,
+	"workbench.editor.showTabs": true,
+	"cSpell.enabledLanguageIds": [
+		"c",
+		"cpp",
+		"csharp",
+		"go",
+		"html",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"latex",
+		"markdown",
+		"php",
+		"plaintext",
+		"python",
+		"text",
+		"typescript",
+		"typescriptreact",
+		"yml"
+	],
+	"cSpell.words": [
+		"Jurkur",
+		"Omni",
+		"halfling",
+		"typeahead"
+	],
 }

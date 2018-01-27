@@ -1,0 +1,18 @@
+<div class="field"
+     fxLayout="column"
+     fxLayoutAlign="end start"
+     fxFill>
+	<div class="value"
+	     fxLayoutAlign="center center"
+	     fxFill>
+		{{model}}
+		<ng-content *ngIf="!model"
+		            fxLayoutAlign="center center"
+		            fxFill></ng-content>
+	</div>
+	<div class="label"
+	     fxLayoutAlign="center center"
+	     fxFill>
+		{{label}}
+	</div>
+</div>

@@ -1,0 +1,8 @@
+<cs-type-ahead [model]="race"
+               label="Race"
+               [getSuggestedValues]="getSuggestedFunction()"
+               [getDisplayValue]="getDisplayValueFunction()"
+               [getValue]="getValueFunction()"
+               (onLeave)="set($event)"
+               fxFlex>
+</cs-type-ahead>

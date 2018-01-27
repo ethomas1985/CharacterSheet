@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+@import "../characterSheet.component.scss";
+
+// $primary: map-get($theme, primary);
+// $accent: map-get($theme, accent);
+// md-card>md-card-title {
+// 	background-color: $primary;
+// 	.title {
+// 		background-color: white;
+// 		border-bottom: 1px solid $primary;
+// 		border-right: 1px solid $primary;
+// 		border-top-right-radius: 15px;
+// 		padding-left: 30px;
+// 		padding-right: 10px;
+// 	}
+// }
+.selected {
+	background-color: darkgray;
+	color: white;
+	border-radius: 10px;
+}
+
+
+.input {
+	border: 1px solid lightgray;
+	.label {
+		background-color: lightgray;
+		border-bottom-right-radius: 25px;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: .8em;
+	}
+}

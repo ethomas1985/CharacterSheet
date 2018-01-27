@@ -1,0 +1,14 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Ability Scores</mat-card-title>
+	</mat-card-header>
+
+	<mat-card-content fxLayout="column"
+	                  fxLayoutAlign="space-between start"
+	                  fxFill>
+		<app-ability-score *ngFor="let ability of abilityScores; let i = index"
+		                   fxFill
+		                   [ability]="ability">
+		</app-ability-score>
+	</mat-card-content>
+</mat-card>

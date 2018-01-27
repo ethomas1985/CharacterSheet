@@ -1,0 +1,19 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Saving Throws</mat-card-title>
+	</mat-card-header>
+	<mat-card-content fxLayout="row"
+	                  fxLayoutAlign="space-between start">
+		<cs-field [model]="fortitudeScore"
+		          label="Fortitude">
+		</cs-field>
+
+		<cs-field [model]="reflexScore"
+		          label="Reflex">
+		</cs-field>
+
+		<cs-field [model]="willScore"
+		          label="WillScore">
+		</cs-field>
+	</mat-card-content>
+</mat-card>

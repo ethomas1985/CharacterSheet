@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+
+.field {
+	.value {
+		border: 1px solid lightgray;
+		padding: 15px;
+		margin: 10px;
+	}
+	.label {
+		background-color: lightgray;
+		border-bottom-right-radius: 25px;
+		border-bottom-left-radius: 25px;
+		font-size: .8em;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}

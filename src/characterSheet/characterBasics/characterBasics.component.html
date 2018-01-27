@@ -1,0 +1,45 @@
+<mat-card>
+	<mat-card-header fxLayout="row"
+	                 fxLayoutAlign="space-between center">
+		<mat-card-title>Character</mat-card-title>
+	</mat-card-header>
+	<mat-card-content fxLayout="column"
+	                  fxLayoutAlign="space-between start">
+		<div fxLayout="row"
+		     fxLayoutAlign="start stretch"
+		     fxFill>
+			<cs-input [model]="name"
+			          (onLeave)="setName($event)"
+			          label="Character's Name"
+			          fxFill>
+			</cs-input>
+		</div>
+		<div fxLayout="row"
+		     fxLayoutAlign="space-between stretch"
+		     fxFill>
+
+			<cs-input [model]="player"
+			          label="Player's Name"
+			          fxFlex>
+			</cs-input>
+
+			<app-race-input [character]="character"
+			                fxFlex="45">
+			</app-race-input>
+		</div>
+		<div fxLayout="row"
+		     fxLayoutAlign="space-between stretch"
+		     fxFill>
+
+			<app-alignment-input [character]="character"
+			                     fxFlex>
+			</app-alignment-input>
+
+			<cs-input [model]="deity"
+			          label="Deity"
+			          fxFlex="45">
+			</cs-input>
+		</div>
+
+	</mat-card-content>
+</mat-card>

@@ -1,0 +1,20 @@
+<div class="input"
+     fxLayout="column"
+     fxLayoutAlign="start start"
+     fxFlex>
+	<span class="label">{{label}}</span>
+	<input matInput
+	       fxFill
+	       type="{{type}}"
+	       [matAutocomplete]="auto"
+	       [(ngModel)]="displayModel"
+	       class="value" />
+	<mat-autocomplete #auto="matAutocomplete"
+	                  name="value"
+	                  fxFlex>
+		<mat-option *ngFor="let option of values"
+		            [value]="toValue(option)">
+			{{toDisplayValue(option)}}
+		</mat-option>
+	</mat-autocomplete>
+</div>

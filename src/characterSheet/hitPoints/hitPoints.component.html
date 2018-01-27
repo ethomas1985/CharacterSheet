@@ -1,0 +1,47 @@
+<mat-card>
+	<mat-card-header fxLayout="row"
+	                 fxLayoutAlign="space-between center">
+		<mat-card-title>Hit Points</mat-card-title>
+		<cs-field [model]="total"
+		          label="Total">
+		</cs-field>
+	</mat-card-header>
+	<mat-card-content fxLayout="column"
+	                  fxLayoutAlign="space-between start">
+
+		<div class="row"
+		     fxLayout="row"
+		     fxLayoutAlign="space-between center"
+		     fxFill>
+			<cs-field [model]="damageResistance"
+			          label="Damage Resistance">
+			</cs-field>
+		</div>
+
+		<div class="row"
+		     fxLayout="row"
+		     fxLayoutAlign="space-between center"
+		     fxFill>
+			<cs-field [model]="nonLethal"
+			          label="Non-lethal">
+			</cs-field>
+		</div>
+
+		<div class="row"
+		     fxLayout="row"
+		     fxLayoutAlign="space-between center"
+		     fxFill>
+			<cs-field [model]="damage"
+			          label="Damage">
+			</cs-field>
+
+			<cs-field [model]="temporary"
+			          label="Temporary">
+			</cs-field>
+
+			<cs-field [model]="hitPoints"
+			          label="Current">
+			</cs-field>
+		</div>
+	</mat-card-content>
+</mat-card>

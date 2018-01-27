@@ -1,0 +1,26 @@
+<div fxLayout="row"
+     fxLayoutAlign="space-around center"
+     fxFill>
+	<div fxFlex="10"
+	     class="title">{{ability.type | titlecase}}</div>
+
+	<cs-field [model]="modifier"
+	          label="Modifier">
+	</cs-field>
+	|
+	<cs-field [model]="ability.score"
+	          label="Score">
+	</cs-field>
+	=
+	<cs-field [model]="ability.base"
+	          label="Base">
+	</cs-field>
+	+
+	<cs-field [model]="ability.temporary"
+	          label="Temporary">
+	</cs-field>
+	-
+	<cs-field [model]="ability.penalty"
+	          label="Penalty">
+	</cs-field>
+</div>

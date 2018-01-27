@@ -6,101 +6,155 @@ import { FormsModule } from "@angular/forms";
 import { CommonModule, JsonPipe } from "@angular/common";
 import
 {
-	MaterialModule,
-	MD_PLACEHOLDER_GLOBAL_OPTIONS,
-	MdAutocompleteModule,
-	MdButtonModule,
-	MdButtonToggleModule,
-	MdCardModule,
-	MdCheckboxModule,
-	MdChipsModule,
-	MdCoreModule,
-	MdDatepickerModule,
-	MdDialogModule,
-	MdExpansionModule,
-	MdGridListModule,
-	MdIconModule,
-	MdIconRegistry,
-	MdInputModule,
-	MdListModule,
-	MdMenuModule,
-	MdNativeDateModule,
-	MdPaginatorModule,
-	MdProgressBarModule,
-	MdProgressSpinnerModule,
-	MdRadioModule,
-	MdRippleModule,
-	MdSelectModule,
-	MdSidenavModule,
-	MdSliderModule,
-	MdSlideToggleModule,
-	MdSnackBarModule,
-	MdSortModule,
-	MdTableModule,
-	MdTabsModule,
-	MdToolbarModule,
-	MdTooltipModule
+	MatAutocompleteModule,
+	MatButtonModule,
+	MatButtonToggleModule,
+	MatCardModule,
+	MatCheckboxModule,
+	MatChipsModule,
+	MatDatepickerModule,
+	MatDialogModule,
+	MatExpansionModule,
+	MatGridListModule,
+	MatIconModule,
+	MatIconRegistry,
+	MatInputModule,
+	MatListModule,
+	MatMenuModule,
+	MatNativeDateModule,
+	MatPaginatorModule,
+	MatProgressBarModule,
+	MatProgressSpinnerModule,
+	MatRadioModule,
+	MatRippleModule,
+	MatSelectModule,
+	MatSidenavModule,
+	MatSliderModule,
+	MatSlideToggleModule,
+	MatSnackBarModule,
+	MatSortModule,
+	MatTableModule,
+	MatTabsModule,
+	MatToolbarModule,
+	MatTooltipModule
 } from "@angular/material";
 
-import { Utilities } from "./utilities.functions";
+import { FieldComponent } from "./field/field.component";
+import { GroupComponent } from "./group/group.component";
+import { InputComponent } from "./input/input.component";
+import { TitleComponent } from "./title/title.component";
+import { TypeAheadComponent } from "./typeahead/typeAhead.component";
 
+import { Utilities } from "./utilities.functions";
+import { Input } from "@angular/core/src/metadata/directives";
+import { Title } from "@angular/platform-browser/src/browser/title";
+import { AlignmentService } from "shared/alignment.service";
+import { RaceService } from "./race.service";
 
 @NgModule({
 	imports: [
+		CommonModule,
+		FlexLayoutModule,
+		FormsModule,
+		HttpModule,
+		MatAutocompleteModule,
+		MatButtonModule,
+		MatButtonToggleModule,
+		MatCardModule,
+		MatCheckboxModule,
+		MatChipsModule,
+		MatDatepickerModule,
+		MatDialogModule,
+		MatExpansionModule,
+		MatGridListModule,
+		MatIconModule,
+		MatInputModule,
+		MatListModule,
+		MatMenuModule,
+		MatNativeDateModule,
+		MatPaginatorModule,
+		MatProgressBarModule,
+		MatProgressSpinnerModule,
+		MatRadioModule,
+		MatRippleModule,
+		MatSelectModule,
+		MatSidenavModule,
+		MatSliderModule,
+		MatSlideToggleModule,
+		MatSnackBarModule,
+		MatSortModule,
+		MatTableModule,
+		MatTabsModule,
+		MatToolbarModule,
+		MatTooltipModule,
 	],
 	exports: [
 		CommonModule,
 		FlexLayoutModule,
 		FormsModule,
 		HttpModule,
-		MaterialModule,
-		MdAutocompleteModule,
-		MdButtonModule,
-		MdButtonToggleModule,
-		MdCardModule,
-		MdCheckboxModule,
-		MdChipsModule,
-		MdCoreModule,
-		MdDatepickerModule,
-		MdDialogModule,
-		MdExpansionModule,
-		MdGridListModule,
-		MdIconModule,
-		MdInputModule,
-		MdListModule,
-		MdMenuModule,
-		MdNativeDateModule,
-		MdPaginatorModule,
-		MdProgressBarModule,
-		MdProgressSpinnerModule,
-		MdRadioModule,
-		MdRippleModule,
-		MdSelectModule,
-		MdSidenavModule,
-		MdSliderModule,
-		MdSlideToggleModule,
-		MdSnackBarModule,
-		MdSortModule,
-		MdTableModule,
-		MdTabsModule,
-		MdToolbarModule,
-		MdTooltipModule,
+		MatAutocompleteModule,
+		MatButtonModule,
+		MatButtonToggleModule,
+		MatCardModule,
+		MatCheckboxModule,
+		MatChipsModule,
+		MatDatepickerModule,
+		MatDialogModule,
+		MatExpansionModule,
+		MatGridListModule,
+		MatIconModule,
+		MatInputModule,
+		MatListModule,
+		MatMenuModule,
+		MatNativeDateModule,
+		MatPaginatorModule,
+		MatProgressBarModule,
+		MatProgressSpinnerModule,
+		MatRadioModule,
+		MatRippleModule,
+		MatSelectModule,
+		MatSidenavModule,
+		MatSliderModule,
+		MatSlideToggleModule,
+		MatSnackBarModule,
+		MatSortModule,
+		MatTableModule,
+		MatTabsModule,
+		MatToolbarModule,
+		MatTooltipModule,
+
+		FieldComponent,
+		GroupComponent,
+		InputComponent,
+		TitleComponent,
+		TypeAheadComponent
 	],
 	providers: [
-		Utilities
+		Utilities,
+		AlignmentService,
+		RaceService
+	],
+	declarations: [
+		FieldComponent,
+		GroupComponent,
+		InputComponent,
+		TitleComponent,
+		TypeAheadComponent
 	]
 })
 export class SharedModule
 {
-	constructor(mdIconRegistry: MdIconRegistry, sanitizer: DomSanitizer)
+	constructor(MatIconRegistry: MatIconRegistry, sanitizer: DomSanitizer)
 	{
-		mdIconRegistry.addSvgIcon("pope-crown", sanitize("/assets/icons/delapouite/originals/svg/000000/transparent/pope-crown.svg"));
+		MatIconRegistry.addSvgIcon("pope-crown", sanitize("/assets/icons/delapouite/originals/svg/000000/transparent/pope-crown.svg"));
 
-		mdIconRegistry.addSvgIcon("fireball", sanitize("/assets/icons/lorc/originals/svg/000000/transparent/fireball.svg"));
+		MatIconRegistry.addSvgIcon("fireball", sanitize("/assets/icons/lorc/originals/svg/000000/transparent/fireball.svg"));
 
-		mdIconRegistry.addSvgIcon("pocket-bow", sanitize("/assets/icons/lorc/originals/svg/000000/transparent/pocket-bow.svg"));
+		MatIconRegistry.addSvgIcon("pocket-bow", sanitize("/assets/icons/lorc/originals/svg/000000/transparent/pocket-bow.svg"));
 
-		function sanitize(value) {
+		function sanitize(value)
+		{
 			return sanitizer.bypassSecurityTrustResourceUrl(value);
 		}
 	}

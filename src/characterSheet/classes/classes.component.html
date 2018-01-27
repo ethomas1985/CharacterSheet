@@ -1,0 +1,44 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Classes</mat-card-title>
+	</mat-card-header>
+
+	<mat-card-content fxLayout="column"
+	                  fxLayoutAlign="space-between start"
+	                  fxFill>
+		<div *ngFor="let class of classes; let i = index"
+		     fxLayout="row"
+		     fxLayoutAlign="space-around start"
+		     fxFill>
+
+			<cs-field label="Favored Class">
+				<mat-icon *ngIf="class.isFavored">check</mat-icon>
+			</cs-field>
+
+			<cs-field [model]="class.class"
+			          label="Class">
+			</cs-field>
+
+			<cs-field [model]="class.level"
+			          label="Level">
+			</cs-field>
+
+			<cs-field [model]="class.baseAttackBonus"
+			          label="Base Attack Bonus">
+			</cs-field>
+
+			<cs-field [model]="class.Fortitude"
+			          label="Fortitude">
+			</cs-field>
+
+			<cs-field [model]="class.Reflex"
+			          label="Reflex">
+			</cs-field>
+
+			<cs-field [model]="class.Will"
+			          label="Will">
+			</cs-field>
+		</div>
+	</mat-card-content>
+
+</mat-card>

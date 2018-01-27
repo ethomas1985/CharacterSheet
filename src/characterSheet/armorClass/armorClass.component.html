@@ -1,0 +1,24 @@
+<mat-card>
+	<mat-card-header fxLayout="row"
+	                 fxLayoutAlign="space-between center">
+		<mat-card-title>Armor Class</mat-card-title>
+		<cs-field [model]="armorClass"
+		          label="Armor Class">
+		</cs-field>
+	</mat-card-header>
+	<mat-card-content fxLayout="row"
+	                  fxLayoutAlign="space-around start">
+
+		<cs-field [model]="flatFooted"
+		          label="Flat-footed">
+		</cs-field>
+
+		<cs-field [model]="touch"
+		          label="Touch">
+		</cs-field>
+
+		<cs-field [model]="combatManeuverDefense"
+		          label="Combat Maneuver Defense">
+		</cs-field>
+	</mat-card-content>
+</mat-card>

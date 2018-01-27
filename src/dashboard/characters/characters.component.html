@@ -1,24 +1,30 @@
 <div fxLayout="column"
      fxLayoutAlign="space-around stretch">
-	<md-toolbar color="primary">
+	<mat-toolbar color="primary">
 		<span>Characters</span>
 		<span fxFlex></span>
-		<button md-mini-fab
+		<button mat-mini-fab
 		        color="accent"
 		        [routerLink]="'/new-character'">
-			<md-icon>add</md-icon>
+			<mat-icon>add</mat-icon>
 		</button>
-	</md-toolbar>
+	</mat-toolbar>
 
 	<div *ngFor="let character of characters; let i = index">
-		<md-card>
-			<md-card-header>
-				<div md-card-avatar>
-					<md-icon [svgIcon]="character.icon"></md-icon>
+		<mat-card>
+			<mat-card-header>
+				<div mat-card-avatar>
+					<mat-icon [svgIcon]="character.icon"></mat-icon>
 				</div>
-				<md-card-title>{{character.name}}</md-card-title>
-				<md-card-subtitle>Lvl {{character.level}} {{character.class}}</md-card-subtitle>
-			</md-card-header>
-		</md-card>
+				<mat-card-title>{{character.name}}</mat-card-title>
+				<mat-card-subtitle>Lvl {{character.level}} {{character.class}}</mat-card-subtitle>
+				<span fxFlex></span>
+				<button mat-mini-fab
+				        color="accent"
+				        (click)="goTo(character)">
+					<mat-icon>arrow_forward</mat-icon>
+				</button>
+			</mat-card-header>
+		</mat-card>
 	</div>
 </div>

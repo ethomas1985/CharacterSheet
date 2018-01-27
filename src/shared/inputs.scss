@@ -1,0 +1,25 @@
+.input {
+	border: 1px solid lightgray;
+	padding-bottom: 1em;
+	.label {
+		background-color: lightgray;
+		border-bottom-right-radius: 25px;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: .8em;
+	}
+	input,
+	input[type="text"] {
+		box-sizing: border-box;
+		border: none; // padding: 10px;
+		display: block;
+		width: 100%;
+		font-size: 16px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 5px;
+	}
+	input:focus {
+		outline: none;
+	}
+}

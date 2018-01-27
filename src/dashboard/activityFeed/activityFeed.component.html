@@ -1,17 +1,17 @@
 <div fxLayout="column"
      fxLayoutAlign="space-around stretch">
-	<md-toolbar color="primary">
+	<mat-toolbar color="primary">
 		<span>User Activity</span>
-	</md-toolbar>
+	</mat-toolbar>
 
 	<div *ngFor="let event of activityFeed; let i = index">
-		<md-card>
-			<md-card-header>
-				<div md-card-avatar>
-					<md-icon>{{event.icon}}</md-icon>
+		<mat-card>
+			<mat-card-header>
+				<div mat-card-avatar>
+					<mat-icon>{{event.icon}}</mat-icon>
 				</div>
-				<md-card-title>{{event.text}}</md-card-title>
-			</md-card-header>
-		</md-card>
+				<mat-card-title>{{event.text}}</mat-card-title>
+			</mat-card-header>
+		</mat-card>
 	</div>
 </div>

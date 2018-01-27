@@ -4,40 +4,42 @@ import { Observable } from "rxjs/Observable";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
 
-export interface Character
-{
-	icon: string;
-	name: string;
-	level: number;
-	class: string;
-}
-
 @Injectable()
 export class CharactersService
 {
-	_events: Character[];
-	_eventsObservable: Observable<Character[]>;
+	_events: MicroCharacter[];
+	_eventsObservable: Observable<MicroCharacter[]>;
 
-	private static mockEvents(): Character[]
+	private static mockEvents(): MicroCharacter[]
 	{
-		const items: Character[] = [
+		const items: MicroCharacter[] = [
 			{
+				id: "1",
 				icon: "pocket-bow",
 				name: "Sotally Tober",
 				level: 8,
 				class: "Ranger"
 			},
 			{
+				id: "2",
 				icon: "fireball",
 				name: "Tyrida",
 				level: 2,
-				class: "Sorceror"
+				class: "Sorcerer"
 			},
 			{
+				id: "3",
 				icon: "pope-crown",
 				name: "Ygdor SteelBeard",
 				level: 6,
 				class: "Cleric"
+			},
+			{
+				id: "fb2df686-a3ec-4303-a11d-a90074197357",
+				icon: "fireball",
+				name: "Jorkur",
+				level: 4,
+				class: "Sorcerer"
 			}
 		];
 		return items;
@@ -54,7 +56,7 @@ export class CharactersService
 		});
 	}
 
-	getCharacters(): Observable<Character[]>
+	getCharacters(): Observable<MicroCharacter[]>
 	{
 		return this._eventsObservable;
 	}

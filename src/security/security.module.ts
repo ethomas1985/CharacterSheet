@@ -1,5 +1,4 @@
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { MdCardModule, MdInputModule, MD_PLACEHOLDER_GLOBAL_OPTIONS } from "@angular/material";
 import { NgModule } from "@angular/core";
 
 import { SharedModule } from "../shared/shared.module";
@@ -15,8 +14,6 @@ import { LoginComponent } from "./login.component";
 	],
 	imports: [
 		FlexLayoutModule,
-		MdCardModule,
-		MdInputModule,
 		SharedModule
 	],
 	providers: [
