@@ -1,11 +1,11 @@
-import { Character } from "../characterSheet.types";
+import { Character } from "../../characterSheet.types";
 
 import { Component, OnInit, Input, Output } from "@angular/core";
 
 @Component({
 	selector: "app-character-speed",
 	templateUrl: "speed.component.html",
-	styleUrls: ["../characterSheet.cards.scss"]
+	styleUrls: ["../../characterSheet.cards.scss"]
 })
 
 export class SpeedComponent implements OnInit

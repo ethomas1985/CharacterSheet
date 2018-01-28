@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from "@angular/core";
 @Component({
 	selector: "app-hit-points",
 	templateUrl: "hitPoints.component.html",
-	styleUrls: ["../characterSheet.cards.scss", "hitPoints.component.scss"]
+	styleUrls: ["../../characterSheet.cards.scss", "hitPoints.component.scss"]
 })
 
 export class HitPointsComponent implements OnInit

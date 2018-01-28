@@ -1,11 +1,11 @@
-import { Character, DefensiveScore } from "../characterSheet.types";
+import { Character, DefensiveScore } from "../../characterSheet.types";
 
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
 	selector: "app-armor-class",
 	templateUrl: "armorClass.component.html",
-	styleUrls: ["../characterSheet.cards.scss", "armorClass.component.scss"]
+	styleUrls: ["../../characterSheet.cards.scss", "armorClass.component.scss"]
 })
 export class ArmorClassComponent implements OnInit
 {

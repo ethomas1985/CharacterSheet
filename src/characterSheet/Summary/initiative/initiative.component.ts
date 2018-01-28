@@ -1,11 +1,11 @@
-import { Character } from "../characterSheet.types";
+import { Character } from "../../characterSheet.types";
 
 import { Component, OnInit, Input, Output } from "@angular/core";
 
 @Component({
 	selector: "app-character-initiative",
 	templateUrl: "initiative.component.html",
-	styleUrls: ["../characterSheet.cards.scss", "initiative.component.scss"]
+	styleUrls: ["../../characterSheet.cards.scss", "initiative.component.scss"]
 })
 export class InitiativeComponent implements OnInit
 {

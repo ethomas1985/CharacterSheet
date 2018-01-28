@@ -1,11 +1,11 @@
-import { SavingThrow } from "../characterSheet.types";
+import { SavingThrow } from "../../characterSheet.types";
 
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
 	selector: "app-saving-throws",
 	templateUrl: "savingThrows.component.html",
-	styleUrls: ["../characterSheet.cards.scss", "savingThrows.component.scss"]
+	styleUrls: ["../../characterSheet.cards.scss", "savingThrows.component.scss"]
 })
 
 export class SavingThrowsComponent implements OnInit

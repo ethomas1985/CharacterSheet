@@ -1,15 +1,15 @@
-import { Character } from "../characterSheet.types";
+import { Character } from "../../characterSheet.types";
 
 import { Component, OnInit, Input, Output } from "@angular/core";
 
-import { SecurityService } from "../../security/security.service";
-import { Utilities } from "../../shared/utilities.functions";
-import { AlignmentService, Alignment } from "../../shared/alignment.service";
+import { SecurityService } from "../../../security/security.service";
+import { Utilities } from "../../../shared/utilities.functions";
+import { AlignmentService, Alignment } from "../../../shared/alignment.service";
 
 @Component({
 	selector: "app-character-basics",
 	templateUrl: "characterBasics.component.html",
-	styleUrls: ["../characterSheet.cards.scss", "characterBasics.component.scss"]
+	styleUrls: ["../../characterSheet.cards.scss", "characterBasics.component.scss"]
 })
 export class CharacterBasicsComponent implements OnInit
 {

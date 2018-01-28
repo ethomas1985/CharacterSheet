@@ -1,4 +1,4 @@
-import { AbilityScore } from "../characterSheet.types";
+import { AbilityScore } from "../../characterSheet.types";
 
 import { Component, OnInit, Input } from "@angular/core";
 

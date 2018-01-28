@@ -1,94 +1,49 @@
-<div fxLayout="column"
-     fxLayoutAlign="start center"
+<div fxLayout="row"
+     fxLayoutAlign="space-between start"
      fxFill>
-	<mat-toolbar color="accent">Character Sheet</mat-toolbar>
 
-	<div fxLayout="row"
-	     fxLayoutAlign="space-between start"
-	     fxFill>
+		<mat-tab label="Character">
+			<app-character-summary [character]="character"
+			                       fxFill>
+			</app-character-summary>
+		</mat-tab>
+		<mat-tab label="Defense">
+			Defense
+		</mat-tab>
+		<mat-tab label="Offense">
+			Offense
+		</mat-tab>
+		<mat-tab label="Skills">
+			Skills
+		</mat-tab>
+		<mat-tab label="Feats">
+			Feats
+		</mat-tab>
+		<mat-tab label="Spells">
+			Spells
+		</mat-tab>
+		<mat-tab label="Spell Book">
+			Spell Book
+		</mat-tab>
+		<mat-tab label="Equipment">
+			Equipment
+		</mat-tab>
+		<mat-tab label="Companions">
+			Companions
+		</mat-tab>
+		<mat-tab label="Background">
+			Background
+		</mat-tab>
+		<mat-tab label="Adventures">
+			Adventures
+		</mat-tab>
+	</mat-tab-group>
 
-		<div fxLayout="column"
-		     fxLayoutAlign="space-between start"
-		     fxFlex>
-
-			<div fxLayout="row"
-			     fxLayoutAlign="space-around start"
-			     fxFill>
-
-				<app-character-basics [character]="character"
-				                      fxFlex="50">
-				</app-character-basics>
-
-				<div fxLayout="column"
-				     fxLayoutAlign="space-around start"
-				     fxFlex>
-
-					<app-character-initiative [character]="character"
-					                          fxFill>
-					</app-character-initiative>
-
-					<app-character-speed [character]="character"
-					                     fxFill>
-					</app-character-speed>
-				</div>
-			</div>
-
-			<div fxLayout="row"
-			     fxLayoutAlign="space-around center"
-			     fxFill>
-				<app-character-classes [classes]="character.classes"
-				                       fxFill>
-				</app-character-classes>
-			</div>
-
-			<div fxLayout="row"
-			     fxLayoutAlign="space-around center"
-			     fxFill>
-				<app-ability-scores [abilityScores]="abilityScores"
-				                    fxFill>
-				</app-ability-scores>
-			</div>
-
-			<div fxLayout="row"
-			     fxLayoutAlign="space-around start"
-			     fxFill>
-
-				<div fxLayout="column"
-				     fxLayoutAlign="space-around start"
-				     fxFlex>
-
-					<app-armor-class [character]="character"
-					                 fxFill>
-					</app-armor-class>
-
-					<app-saving-throws [fortitude]="character.fortitude"
-					                   [reflex]="character.reflex"
-					                   [will]="character.will"
-					                   fxFill>
-					</app-saving-throws>
-				</div>
-
-				<div fxLayout="column"
-				     fxLayoutAlign="space-around start"
-				     fxFlex>
-
-					<app-hit-points [total]="character.maxHealthPoints"
-					                [hitPoints]="character.healthPoints"
-					                [damage]="character.damage"
-					                fxFill>
-					</app-hit-points>
-
-				</div>
-			</div>
-		</div>
-
-		<div fxLayout="column"
-		     fxLayoutAlign="start center"
-		     fxFlex="25">
-			<mat-toolbar color="primary">Diagnostic</mat-toolbar>
-			<pre fxFill>_character :</pre>
-			<pre fxFill>{{character | json}}</pre>
-		</div>
+	<div fxLayout="column"
+	     fxLayoutAlign="start center"
+	     fxFlex="25">
+		<pre fxFill>_character :</pre>
+		<pre fxFill>{{character | json}}</pre>
 	</div>
 
 </div>

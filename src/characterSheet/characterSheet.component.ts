@@ -22,9 +22,7 @@ export class CharacterSheetComponent implements OnInit
 		private $router: Router,
 		private $characterService: CharacterService,
 		private $utilities: Utilities)
-	{
-
-	}
+	{ }
 
 	ngOnInit()
 	{
@@ -52,17 +50,5 @@ export class CharacterSheetComponent implements OnInit
 				.subscribe(x => self._character = x);
 		}
 		return this._character;
-	}
-
-	get abilityScores(): AbilityScore[]
-	{
-		return [
-			this.character.strength,
-			this.character.dexterity,
-			this.character.constitution,
-			this.character.intelligence,
-			this.character.wisdom,
-			this.character.charisma
-		];
 	}
 }
