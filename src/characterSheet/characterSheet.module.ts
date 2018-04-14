@@ -18,6 +18,8 @@ import { RaceInputComponent } from "./Summary/characterBasics/raceInput/raceInpu
 import { SavingThrowsComponent } from "./Summary/savingThrows/savingThrows.component";
 import { SpeedComponent } from "./Summary/speed/speed.component";
 
+// import { SpellBookComponent } from "./Spellbook/spellbook.component";
+
 import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
@@ -40,6 +42,7 @@ import { SharedModule } from "../shared/shared.module";
 		RaceInputComponent,
 		SavingThrowsComponent,
 		SpeedComponent,
+		// SpellBookComponent
 	],
 	providers: [
 		CharacterService

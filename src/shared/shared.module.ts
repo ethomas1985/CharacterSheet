@@ -50,6 +50,8 @@ import { Input } from "@angular/core/src/metadata/directives";
 import { Title } from "@angular/platform-browser/src/browser/title";
 import { AlignmentService } from "shared/alignment.service";
 import { RaceService } from "./race.service";
+import { FacetComponent } from "./facet/facet.component";
+import { BucketComponent } from "./facet/bucket.component";
 
 @NgModule({
 	imports: [
@@ -128,7 +130,9 @@ import { RaceService } from "./race.service";
 		GroupComponent,
 		InputComponent,
 		TitleComponent,
-		TypeAheadComponent
+		TypeAheadComponent,
+		FacetComponent,
+		BucketComponent
 	],
 	providers: [
 		Utilities,
@@ -140,7 +144,9 @@ import { RaceService } from "./race.service";
 		GroupComponent,
 		InputComponent,
 		TitleComponent,
-		TypeAheadComponent
+		TypeAheadComponent,
+		FacetComponent,
+		BucketComponent
 	]
 })
 export class SharedModule

@@ -1,0 +1,25 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>{{name}}</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<cs-bucket *ngFor="let bucket of buckets; let j = index"
+		           [model]="bucket"
+		           (select)="onSelected($event)">
+		</cs-bucket>
+	</mat-card-content>
+	<mat-card-actions fxLayout="row"
+	                  fxLayoutAlign="space-between center"
+	                  *ngIf="hasChanges">
+		<button mat-raised-button
+		        color="primary"
+		        (click)="doClear()">
+			Clear
+		</button>
+		<button mat-raised-button
+		        color="primary"
+		        (click)="doApply()">
+			Apply
+		</button>
+	</mat-card-actions>
+</mat-card>

@@ -32,8 +32,8 @@ export class NineBoxService
 			},
 			{
 				icon: "book",
-				name: `Library`,
-				link: ["/library"]
+				name: `Spellbook`,
+				link: ["/spellbook"]
 			}
 		];
 		return items;

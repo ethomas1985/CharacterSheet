@@ -14,6 +14,9 @@ import { SharedModule } from "../shared/shared.module";
 import { SecurityModule } from "../security/security.module";
 import { OmniBarComponent } from "./omniBar/omniBar.component";
 import { NineBoxService } from "./omniBar/nineBox.service";
+import { SpellBookComponent } from "spellbook/spellbook.component";
+import { SpellBookModule } from "spellbook/spellBook.module";
+import { ApiClientService } from "../shared/apiClient.service";
 
 @NgModule({
 	declarations: [
@@ -32,11 +35,13 @@ import { NineBoxService } from "./omniBar/nineBox.service";
 		),
 		SecurityModule,
 		DashboardModule,
-		CharacterSheetModule
+		CharacterSheetModule,
+		SpellBookModule
 	],
 	providers: [
 		{ provide: MATERIAL_COMPATIBILITY_MODE, useValue: true },
-		NineBoxService
+		NineBoxService,
+		ApiClientService
 	],
 	bootstrap: [AppComponent]
 })

@@ -1,0 +1,63 @@
+<div fxLayout="column"
+     fxLayoutAlign="space-between start"
+     fxFlex>
+
+	<div fxLayout="row"
+	     fxLayoutAlign="space-around center"
+	     fxFill>
+
+		<app-character-basics [character]="character"
+		                      fxFlex="50">
+		</app-character-basics>
+
+		<div fxLayout="column"
+		     fxLayoutAlign="space-around start"
+		     fxFlex>
+
+			<app-character-initiative [character]="character"
+			                          fxFill>
+			</app-character-initiative>
+
+			<app-character-speed [character]="character"
+			                     fxFill>
+			</app-character-speed>
+		</div>
+	</div>
+
+	<div fxLayout="row"
+	     fxLayoutAlign="space-around start"
+	     fxFill>
+		<app-character-classes [classes]="character.classes"
+		                       fxFill>
+		</app-character-classes>
+	</div>
+
+	<div fxLayout="row"
+	     fxLayoutAlign="space-between start"
+	     fxFill>
+		<app-ability-scores [abilityScores]="abilityScores"
+		                    fxFlex="50">
+		</app-ability-scores>
+
+		<div fxLayout="column"
+		     fxLayoutAlign="space-around start"
+		     fxFlex>
+
+			<app-hit-points [total]="character.maxHealthPoints"
+			                [hitPoints]="character.healthPoints"
+			                [damage]="character.damage"
+			                fxFill>
+			</app-hit-points>
+
+			<app-armor-class [character]="character"
+			                 fxFill>
+			</app-armor-class>
+
+			<app-saving-throws [fortitude]="character.fortitude"
+			                   [reflex]="character.reflex"
+			                   [will]="character.will"
+			                   fxFill>
+			</app-saving-throws>
+		</div>
+	</div>
+</div>

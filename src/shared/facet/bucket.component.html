@@ -1,0 +1,10 @@
+<div fxLayout="row"
+     fxLayoutAlign="space-between center">
+	<mat-checkbox [checked]="selected"
+	              (change)="toggle($event)">
+		{{value}}
+	</mat-checkbox>
+	<div class="chip">
+		{{count}}
+	</div>
+</div>

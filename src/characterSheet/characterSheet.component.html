@@ -1,49 +1,40 @@
-<div fxLayout="row"
-     fxLayoutAlign="space-between start"
-     fxFill>
-
-		<mat-tab label="Character">
-			<app-character-summary [character]="character"
-			                       fxFill>
-			</app-character-summary>
-		</mat-tab>
-		<mat-tab label="Defense">
-			Defense
-		</mat-tab>
-		<mat-tab label="Offense">
-			Offense
-		</mat-tab>
-		<mat-tab label="Skills">
-			Skills
-		</mat-tab>
-		<mat-tab label="Feats">
-			Feats
-		</mat-tab>
-		<mat-tab label="Spells">
-			Spells
-		</mat-tab>
-		<mat-tab label="Spell Book">
-			Spell Book
-		</mat-tab>
-		<mat-tab label="Equipment">
-			Equipment
-		</mat-tab>
-		<mat-tab label="Companions">
-			Companions
-		</mat-tab>
-		<mat-tab label="Background">
-			Background
-		</mat-tab>
-		<mat-tab label="Adventures">
-			Adventures
-		</mat-tab>
-	</mat-tab-group>
-
-	<div fxLayout="column"
-	     fxLayoutAlign="start center"
-	     fxFlex="25">
-		<pre fxFill>_character :</pre>
-		<pre fxFill>{{character | json}}</pre>
-	</div>
-
-</div>
+<mat-tab-group fxFlex="100"
+               color="accent">
+	<mat-tab label="Character">
+		<app-character-summary [character]="character"
+		                       fxFill>
+		</app-character-summary>
+	</mat-tab>
+	<mat-tab label="Defense">
+		Defense
+	</mat-tab>
+	<mat-tab label="Offense">
+		Offense
+	</mat-tab>
+	<mat-tab label="Skills">
+		Skills
+	</mat-tab>
+	<mat-tab label="Feats">
+		Feats
+	</mat-tab>
+	<mat-tab label="Spells">
+		Spells
+	</mat-tab>
+	<!-- <mat-tab label="Spell Book">
+		<app-spell-book [characterId]="character.id"
+		                fxFill>
+		</app-spell-book>
+	</mat-tab> -->
+	<mat-tab label="Equipment">
+		Equipment
+	</mat-tab>
+	<mat-tab label="Companions">
+		Companions
+	</mat-tab>
+	<mat-tab label="Background">
+		Background
+	</mat-tab>
+	<mat-tab label="Adventures">
+		Adventures
+	</mat-tab>
+</mat-tab-group>

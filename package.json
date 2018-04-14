@@ -36,6 +36,7 @@
     "@angular/language-service": "^4.4.6",
     "@types/jasmine": "^2.6.2",
     "@types/jasminewd2": "^2.0.3",
+    "@types/lodash": "^4.14.106",
     "@types/node": "^6.0.90",
     "codelyzer": "~3.0.1",
     "jasmine-core": "~2.6.2",
