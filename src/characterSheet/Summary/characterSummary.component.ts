@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
 
-import { Character, AbilityScore } from "../characterSheet.types";
-
 @Component({
 	selector: "app-character-summary",
 	templateUrl: "characterSummary.component.html",

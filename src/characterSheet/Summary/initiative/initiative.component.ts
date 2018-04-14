@@ -1,5 +1,3 @@
-import { Character } from "../../characterSheet.types";
-
 import { Component, OnInit, Input, Output } from "@angular/core";
 
 @Component({

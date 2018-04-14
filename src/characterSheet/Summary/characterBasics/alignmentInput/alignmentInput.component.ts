@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
 
-import { Character } from "../../../characterSheet.types";
 import { AlignmentService, Alignment } from "../../../../shared/alignment.service";
 import { Utilities } from "../../../../shared/utilities.functions";
 

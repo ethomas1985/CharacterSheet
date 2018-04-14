@@ -1,5 +1,3 @@
-import { AbilityScore } from "../../characterSheet.types";
-
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({

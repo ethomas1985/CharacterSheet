@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
 
-import { Character } from "../../../characterSheet.types";
 import { RaceService, Race } from "../../../../shared/race.service";
 import { Utilities } from "../../../../shared/utilities.functions";
 
