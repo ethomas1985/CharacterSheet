@@ -1,9 +1,10 @@
 import { Routes, Route } from "@angular/router";
 
-import { DashboardComponent } from "../dashboard/dashboard.component";
-import { LoginComponent } from "../security/login.component";
 import { SecurityService } from "../security/security.service";
-import { SpellBookComponent } from "spellbook/spellbook.component";
+
+import { LoginComponent } from "../security/login.component";
+import { DashboardComponent } from "../dashboard/dashboard.component";
+import { SpellBookComponent } from "spellbook/components/spellbook/spellbook.component";
 
 export const AppRoutes = [
 	<Route>{ path: "login", component: LoginComponent },

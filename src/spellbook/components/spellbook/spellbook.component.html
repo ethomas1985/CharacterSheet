@@ -18,7 +18,19 @@
 			<button mat-raised-button
 			        color="primary">Search</button>
 		</div>
+
+		<div *ngIf="canClear"
+		     fxLayoutAlign="space-around center">
+			<button mat-mini-fab
+			        color="primary"
+			        (click)="clear()">Clear</button>
+		</div>
 	</form>
+
+	<div fxLayout="row"
+	     fxLayoutAlign="start center"
+	     fxFill>
+	</div>
 
 	<div fxLayout="row"
 	     fxLayoutAlign="space-between start"
@@ -26,7 +38,7 @@
 
 		<div fxLayout="column"
 		     fxLayoutAlign="start start"
-		     fxFlex="20">
+		     fxFlex="25">
 
 			<cs-facet *ngFor="let facet of facets; let i = index"
 			          [model]="facet"
@@ -40,24 +52,28 @@
 		     fxFlex="80">
 			<mat-card *ngIf="results"
 			          fxFill>
+				<mat-card-header>
+					<mat-card-title>
+						{{resultsCount}} Spells found.
+					</mat-card-title>
+				</mat-card-header>
+
 				<mat-card-content>
-					{{resultsCount}} Spells found.
+					<mat-chip-list>
+						<mat-chip *ngFor="let chip of chips; let i = index">
+							{{chip.Name}}|{{chip.Value}}
+							<button mat-mini-fab
+							        color="primary"
+							        (click)="clearSearchChip(chip)">X</button>
+						</mat-chip>
+					</mat-chip-list>
 				</mat-card-content>
 			</mat-card>
 
-			<mat-card *ngFor="let result of results; let i = index"
-			          fxFill>
-				<mat-card-header>
-					<div mat-card-avatar>
-						<mat-icon [svgIcon]="getIcon(result.School)"></mat-icon>
-					</div>
-					<mat-card-title>{{result.Name}}</mat-card-title>
-					<mat-card-subtitle>{{getSchool(result.School)}} - {{getSubSchool(result.SubSchool)}}</mat-card-subtitle>
-				</mat-card-header>
-				<mat-card-content>
-					{{result.Description}}
-				</mat-card-content>
-			</mat-card>
+			<app-spell *ngFor="let result of results; let i = index"
+			           [spell]="result"
+			           fxFill>
+			</app-spell>
 		</div>
 	</div>
 </div>

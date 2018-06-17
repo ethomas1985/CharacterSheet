@@ -14,7 +14,6 @@ import { SharedModule } from "../shared/shared.module";
 import { SecurityModule } from "../security/security.module";
 import { OmniBarComponent } from "./omniBar/omniBar.component";
 import { NineBoxService } from "./omniBar/nineBox.service";
-import { SpellBookComponent } from "spellbook/spellbook.component";
 import { SpellBookModule } from "spellbook/spellBook.module";
 import { ApiClientService } from "../shared/apiClient.service";
 

@@ -1,19 +1,21 @@
 import * as _ from "lodash";
 import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
 import { forEach } from "@angular/router/src/utils/collection";
+import { Facet, Bucket } from "types/searching";
 
 @Component({
 	selector: "cs-facet",
-	templateUrl: "facet.component.html"
+	templateUrl: "facet.component.html",
+	styleUrls: ["facet.component.scss"]
 })
 
 export class FacetComponent implements OnInit
 {
-	@Input() model: IFacet;
+	@Input() model: Facet;
 
-	@Output() apply: EventEmitter<IFacet> = new EventEmitter();
+	@Output() apply: EventEmitter<Facet> = new EventEmitter();
 
-	_mutableFacet: IFacet;
+	_mutableFacet: Facet;
 	_hasChanges: boolean;
 
 	constructor() { }
@@ -29,7 +31,7 @@ export class FacetComponent implements OnInit
 		return this._mutableFacet.Name;
 	}
 
-	get buckets(): IBucket[]
+	get buckets(): Bucket[]
 	{
 		return this._mutableFacet.Buckets;
 	}
@@ -38,7 +40,7 @@ export class FacetComponent implements OnInit
 		return this._hasChanges;
 	}
 
-	onSelected(bucket: IBucket): void
+	onSelected(bucket: Bucket): void
 	{
 		if (!bucket["copied"]) {
 			throw new Error("Received local scoped object; not emitted value!");

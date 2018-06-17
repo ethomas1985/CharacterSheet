@@ -1,0 +1,64 @@
+<mat-card fxFill>
+	<mat-card-header>
+		<div mat-card-avatar>
+			<mat-icon [svgIcon]="getIcon(school)"></mat-icon>
+		</div>
+		<mat-card-title>{{name}}</mat-card-title>
+		<mat-card-subtitle>{{schoolText}} {{magicDescriptors}}</mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content>
+
+		<div fxLayout="column"
+		     fxLayoutAlign="start start">
+			<div class="row"
+			     fxLayout="row">
+				<mat-chip-list>
+					<mat-chip color="primary" *ngFor="let item of classLevels; let i = index">
+						{{item.className}}:&nbsp;{{item.level}}
+					</mat-chip>
+				</mat-chip-list>
+			</div>
+
+			<div class="row"
+			     fxLayout="row">
+				<b>Casting Time:&nbsp;</b> {{castingTime}}
+			</div>
+
+			<div class="row"
+			     fxLayout="row">
+				<b>Components:&nbsp;</b> {{components}}
+			</div>
+
+			<div class="row"
+			     fxLayout="row">
+				<b>Range:&nbsp;</b> {{range}}
+			</div>
+
+			<div class="row"
+			     fxLayout="row"
+			     *ngIf="effect">
+				<b>Effect:&nbsp;</b> {{effect}}
+			</div>
+
+			<div class="row"
+			     fxLayout="row"
+			     *ngIf="duration">
+				<b>Duration:&nbsp;</b>{{duration}}
+			</div>
+
+			<div class="row"
+			     fxLayout="row" fxLayoutAlign="space-between start">
+				<span *ngIf="savingThrow">
+					<b>Saving Throw:&nbsp;</b> {{savingThrow}}</span>&nbsp;
+				<span *ngIf="resistance">
+					<b>Spell Resistance:&nbsp;</b> {{resistance}}</span>
+			</div>
+
+			<div class="row"
+			     fxLayout="row">
+				{{description}}
+			</div>
+		</div>
+
+	</mat-card-content>
+</mat-card>

@@ -1,8 +1,9 @@
 import { NgModule } from "@angular/core";
 
-import { SpellBookComponent } from "./spellbook.component";
+import { SpellBookComponent } from "./components/spellbook/spellbook.component";
 import { SharedModule } from "shared/shared.module";
-import { SpellSearchService } from "./spellSearch.service";
+import { SpellSearchService } from "./services/spellSearch.service";
+import { SpellCardComponent } from "./components/spellCard/spellCard.component";
 
 @NgModule({
 	imports: [
@@ -10,7 +11,8 @@ import { SpellSearchService } from "./spellSearch.service";
 	],
 	exports: [],
 	declarations: [
-		SpellBookComponent
+		SpellBookComponent,
+		SpellCardComponent
 	],
 	providers: [
 		SpellSearchService

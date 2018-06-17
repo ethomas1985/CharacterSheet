@@ -1,7 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 
-import { ApiClientService } from "../shared/apiClient.service";
+import { ApiClientService } from "../../shared/apiClient.service";
+import { ISpell } from "types/spell";
+import { SearchResults, Facet, SearchChip } from "types/searching";
 
 @Injectable()
 export class SpellSearchService
@@ -9,10 +11,10 @@ export class SpellSearchService
 	constructor(
 		private $dispatchService: ApiClientService) { }
 
-	search(searchText: string, facets?: IFacet[]): Observable<ISearchResults<ISpell>>
+	search(searchText: string, chips?: SearchChip[]): Observable<SearchResults<ISpell>>
 	{
-		console.log("SpellSearchService.search(" + searchText + "):");
-		return this.$dispatchService.post("SpellBook/Search", { SearchText: searchText, Facets: facets });
+		console.log(`SpellSearchService.search("${searchText}", ${JSON.stringify(chips)})`);
+		return this.$dispatchService.post("SpellBook/Search", { SearchText: searchText, Chips: chips });
 	}
 }
 
