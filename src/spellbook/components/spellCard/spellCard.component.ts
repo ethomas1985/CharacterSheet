@@ -67,7 +67,7 @@ export class SpellCardComponent implements OnInit
 		return this.spell.SavingThrow;
 	}
 
-	get description(): string
+	get description(): string[]
 	{
 		return this.spell.Description;
 	}

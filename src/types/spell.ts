@@ -7,7 +7,7 @@ export interface ISpell
 	SubSchools: MagicSubSchool[];
 	MagicDescriptors: MagicDescriptor[];
 	SavingThrow: string;
-	Description: string;
+	Description: string[];
 	HasSpellResistance: boolean;
 	SpellResistance: string;
 	CastingTime: string;

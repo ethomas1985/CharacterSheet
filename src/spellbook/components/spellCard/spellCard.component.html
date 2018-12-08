@@ -13,7 +13,8 @@
 			<div class="row"
 			     fxLayout="row">
 				<mat-chip-list>
-					<mat-chip color="primary" *ngFor="let item of classLevels; let i = index">
+					<mat-chip color="primary"
+					          *ngFor="let item of classLevels; let i = index">
 						{{item.className}}:&nbsp;{{item.level}}
 					</mat-chip>
 				</mat-chip-list>
@@ -47,7 +48,8 @@
 			</div>
 
 			<div class="row"
-			     fxLayout="row" fxLayoutAlign="space-between start">
+			     fxLayout="row"
+			     fxLayoutAlign="space-between start">
 				<span *ngIf="savingThrow">
 					<b>Saving Throw:&nbsp;</b> {{savingThrow}}</span>&nbsp;
 				<span *ngIf="resistance">
@@ -55,8 +57,10 @@
 			</div>
 
 			<div class="row"
-			     fxLayout="row">
-				{{description}}
+			     fxLayout="column">
+				<p *ngFor="let paragraph of description; let i = index">
+					{{paragraph}}
+				</p>
 			</div>
 		</div>
 
